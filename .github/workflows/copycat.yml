@@ -12,8 +12,4 @@ jobs:
       - name: Print folder structure
         run: |
           mkdir $DIRNAME
-          for file in *;do test "$file" != $DIRNAME && cp "$file" $DIRNAME/;done
-      - name: List folder structure
-        run: ls
-      - name: CD and LS
-        run: cd $DIRNAME && ls
+          ls
