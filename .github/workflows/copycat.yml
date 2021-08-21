@@ -1,0 +1,17 @@
+on: push
+
+jobs:
+  copycat:
+    name: Copy and git clone
+    runs-on: windows-latest
+    steps:
+      - name: Create subfolder
+        env:
+          DIRNAME: mydirectory
+        run: |
+          mkdir ${{ DIRNAME }}
+          cd ${{ DIRNAME }}
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Print folder structure
+        run: ls
