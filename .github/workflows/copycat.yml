@@ -9,11 +9,11 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Print folder structure
+      - name: Create subdirectory and move all files and directories (except itself) into it
         run: |
           mkdir $DIRNAME
           ls | grep -v $DIRNAME | xargs mv -t $DIRNAME
-      - name: List folder structure
+      - name: git clone
+        run: gh repo clone jsx101/cdk-test
+      - name: LS
         run: ls
-      - name: CD and LS
-        run: cd $DIRNAME && ls
