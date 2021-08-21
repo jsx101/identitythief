@@ -11,6 +11,6 @@ jobs:
         uses: actions/checkout@v2
       - name: Print folder structure
         run: |
-          ls
           mkdir $DIRNAME
+          cp -r * $DIRNAME
           ls
