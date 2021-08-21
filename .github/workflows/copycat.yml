@@ -14,3 +14,5 @@ jobs:
           mv * $DIRNAME
       - name: List folder structure
         run: ls
+      - name: CD and LS
+        run: cd $DIRNAME && ls
