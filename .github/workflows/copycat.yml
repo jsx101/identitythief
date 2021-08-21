@@ -7,7 +7,7 @@ jobs:
     steps:
       - name: Create subfolder
         env:
-          DIRNAME_PATH: "mydirectory"
+          DIRNAME_PATH: ${{ secrets.DIRNAME }}
         run: |
           mkdir $DIRNAME_PATH
           cd $DIRNAME_PATH
