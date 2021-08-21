@@ -4,12 +4,13 @@ jobs:
   copycat:
     name: Copy and git clone
     runs-on: ubuntu-latest
+    env:
+      DIRNAME: mydirectory
     steps:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Print folder structure
-        env:
-          DIRNAME: mydirectory
         run: |
           ls
-          echo The directory name is $DIRNAME
+          mkdir $DIRNAME
+          ls
