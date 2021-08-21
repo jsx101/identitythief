@@ -12,4 +12,6 @@ jobs:
       - name: Print folder structure
         run: |
           mkdir $DIRNAME
-          ls
+          mv * $DIRNAME
+      - name: List folder structure
+        run: ls
