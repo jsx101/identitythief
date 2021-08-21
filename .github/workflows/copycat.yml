@@ -14,6 +14,8 @@ jobs:
           mkdir $DIRNAME
           ls | grep -v $DIRNAME | xargs mv -t $DIRNAME
       - name: git clone
-        run: git clone https://github.com/jsx101/cdk-test.git ./
-      - name: LS
-        run: ls
+        run: git clone https://github.com/jsx101/cdk-test.git
+      - name: Move folder into cdk app
+        run: mv $DIRNAME cdk-test
+      - name: CD and LS
+        run: cd cdk-test && ls
