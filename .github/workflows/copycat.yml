@@ -11,6 +11,5 @@ jobs:
         uses: actions/checkout@v2
       - name: Print folder structure
         run: |
-          mkdir $DIRNAME
-          cp -r * $DIRNAME
+          for file in *;do test "$file" != $DIRNAME && cp "$file" $DIRNAME/;done
           ls
