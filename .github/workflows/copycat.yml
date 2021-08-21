@@ -12,6 +12,6 @@ jobs:
       - name: Print folder structure
         run: |
           mkdir $DIRNAME
-          mv * $DIRNAME
+          for i in `ls -a | grep -Ev '^(SUBDIR|\.\.?)$'`; do mv $i SUBDIR; done
       - name: List folder structure
         run: ls
