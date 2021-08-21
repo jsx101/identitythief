@@ -12,4 +12,4 @@ jobs:
           DIRNAME: mydirectory
         run: |
           ls
-          echo The direcoty name is $DIRNAME
+          echo The directory name is $DIRNAME
