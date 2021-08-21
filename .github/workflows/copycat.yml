@@ -7,10 +7,10 @@ jobs:
     steps:
       - name: Create subfolder
         env:
-          DIRNAME: mydirectory
+          DIRNAME_PATH: mydirectory
         run: |
-          mkdir $DIRNAME
-          cd $DIRNAME
+          mkdir $DIRNAME_PATH
+          cd $DIRNAME_PATH
       - name: Checkout
         uses: actions/checkout@v2
       - name: Print folder structure
