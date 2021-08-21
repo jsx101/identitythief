@@ -12,7 +12,9 @@ jobs:
       - name: Print folder structure
         run: |
           mkdir $DIRNAME
+          shopt -s extglob dotglob
           mv !($DIRNAME) $DIRNAME
+          shopt -u dotglob
       - name: List folder structure
         run: ls
       - name: CD and LS
